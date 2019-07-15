@@ -57,44 +57,10 @@
             }
 
         </script>
-        
-        <style>
-
-            .menuBar{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #383F45;
-                float: right;
-                padding-top: 9px;
-            }
-        
-            li {
-                float: left;
-            }
-        
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-        
-            li a:hover {
-                color: orange;
-            }
-        
-            .noneElement{
-                display:none;
-            }
-
-        </style>
     
     </head>
     
-    <body onresize="resize()">
+    <body onresize="resize()" onload="resize()">
   
         <div class="menuButton" onclick="menuButtonPressed(this)" id="menuButton">
             <div class="bar1"></div>
@@ -102,7 +68,7 @@
             <div class="bar3"></div>
         </div>
         
-        <ul class="menuBar noneElement" id="menuBar">
+        <ul class="menuBar" id="menuBar">
             <li><a href="https://www.oleitersdorf.com/">Home</a></li>
             <li><a href="https://www.oleitersdorf.com/about/">About</a></li>
             <li><a href="https://www.oleitersdorf.com/education/">Education</a></li>
