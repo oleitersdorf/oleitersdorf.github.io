@@ -1,3 +1,3 @@
-h1{color: blue;}
-p{color: red;}
-.logo{width: 100px; height:100px;}
+h1{color: blue; position: center;}
+p{color: red; position: center; text-align: center;}
+.logo{width: 50%; height:auto; margin: auto;}
