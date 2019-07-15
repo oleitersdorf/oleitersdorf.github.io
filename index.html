@@ -18,6 +18,13 @@
         <link rel="shortcut icon" href="images/favicon.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://oleitersdorf.com/style.css">
+            
+        <script>
+            function openPopup(id) {
+                var popup = document.getElementById(id);
+                popup.classList.toggle("show");
+            }
+        </script>
     
     </head>
     
@@ -28,7 +35,13 @@
         
         <a href="https://oleitersdorf.com/about"> About </a>
         
-        <img class="logo" src="images/falcon.png">
+        <img class="logo" src="images/falcon.png" onclick="openPopup('popupContainer')">
+            
+        <div class="popup" id="popupContainer">
+            
+            <h2> Hi </h2>
+            
+        </div>
         
     </body>
     
