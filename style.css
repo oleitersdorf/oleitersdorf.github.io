@@ -2,4 +2,4 @@ h1{color: blue; position: center;}
 p{color: red; position: center; text-align: center;}
 .logo{width: 50%; height:auto; margin: auto;}
 .popup{display: none}
-.popup .show{display: block}
+.popup.show{display: block}
