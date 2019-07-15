@@ -1,12 +1,5 @@
-h1{
-    color: blue;
-    position: center;
-}
-
-p{
-    color: red;
-    position: center;
-    text-align: center;
+body{
+    margin: 0px;
 }
 
 .logo{
@@ -26,7 +19,7 @@ p{
 .header {
     padding: 60px;
     text-align: center;
-    background: #1abc9c;
+    background: #383F45;
     color: white;
     font-size: 30px;
 }
