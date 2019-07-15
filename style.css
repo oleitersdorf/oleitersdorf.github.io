@@ -77,11 +77,3 @@ body{
         right: 35px;
     }
 }
-
-.menuButton{
-    font-size:30px;
-    cursor:pointer;
-    float: right;
-    padding: 12px;
-    color: white;
-    }

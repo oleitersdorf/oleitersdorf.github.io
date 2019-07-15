@@ -14,41 +14,83 @@
             </script>
         
         <title> Orian Leitersdorf </title>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="shortcut icon" href="images/favicon.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://oleitersdorf.com/style.css">
             
         <script>
+            
             function openPopup(id) {
-                var popup = document.getElementById(id);
-                popup.classList.toggle("show");
+                document.getElementById(id).classList.toggle("show");
             }
+        
+            function openNav() {
+                document.getElementById("myNav").style.height = "100%";
+            }
+        
+            function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+            }
+        
+            function myFunction(x) {
+                x.classList.toggle("change");
+                openNav();
+            }
+
         </script>
+        
+        <style>
+            .menuButton {
+                display: inline-block;
+                cursor: pointer;
+                font-size:30px;
+                cursor:pointer;
+                float: right;
+                padding: 12px;
+                color: white;
+            }
+        
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        
+        .change .bar1, .change .bar2, .change .bar3{
+            background-color:black;
+        }
+        
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        
+        .change .bar2 {opacity: 0;}
+        
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+        </style>
     
     </head>
     
     <body>
         
-        <span class="menuButton" onclick="openNav()">&#9776;</span>
-        
+<!--        <span class="menuButton" onclick="openNav()">&#9776;</span>-->
+        <div class="menuButton" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
         <div class="header">
-            
-            <div>
-                
-                <script>
-                    function openNav() {
-                        document.getElementById("myNav").style.height = "100%";
-                    }
-                
-                function closeNav() {
-                    document.getElementById("myNav").style.height = "0%";
-                }
-                </script>
-                
-                <h1>Orian Leitersdorf</h1>
-            
-            </div>
+
+            <h1>Orian Leitersdorf</h1>
             
         </div>
         
