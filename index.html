@@ -36,7 +36,14 @@
         
             function myFunction(x) {
                 x.classList.toggle("change");
-                openNav();
+                
+                if (x.classList.contains("change")){
+                    openNav();
+                }
+                else{
+                    closeNav();
+                }
+                
             }
 
         </script>
