@@ -155,3 +155,12 @@ li a:hover {
 .noneElement{
     display:none;
     }
+
+.navigatonBarFrame{
+    border:none;
+    float: right;
+    width: 100%;
+    height: 50px;
+}
+ 
+
