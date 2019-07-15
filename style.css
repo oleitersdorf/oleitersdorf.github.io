@@ -42,17 +42,18 @@ body{
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 15%;
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
+    padding-left: 20px;
 }
 
 .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
+    font-size: 26px;
+    color: white;
     display: block;
     transition: 0.3s;
 }
