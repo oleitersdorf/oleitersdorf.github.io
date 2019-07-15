@@ -35,7 +35,8 @@
                 document.getElementById("navigationTab").style.height = "0%";
             }
         
-            function myFunction(x) {
+            function menuButtonPressed(x) {
+                
                 x.classList.toggle("change");
                 
                 if (x.classList.contains("change")){
@@ -57,7 +58,7 @@
     
     <body>
   
-        <div class="menuButton" onclick="myFunction(this)">
+        <div class="menuButton" onclick="menuButtonPressed(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>

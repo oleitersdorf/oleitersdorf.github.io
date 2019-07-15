@@ -15,6 +15,23 @@
         
         <title> Orian Leitersdorf - About </title>
         
+        <script>
+            
+            function menuButtonPressed(x) {
+                
+                x.classList.toggle("change");
+                
+                if (x.classList.contains("change")){
+                    openNav();
+                }
+                else{
+                    closeNav();
+                }
+                
+            }
+        
+        </script>
+        
         <link rel="shortcut icon" href="images/favicon.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://oleitersdorf.com/style.css">
@@ -23,7 +40,7 @@
     
     <body>
         
-        <div class="menuButton" onclick="myFunction(this)">
+        <div class="menuButton" onclick="menuButtonPressed(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
