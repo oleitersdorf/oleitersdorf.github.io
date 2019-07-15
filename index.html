@@ -43,6 +43,18 @@
                 }
                 
             }
+        
+            function resize(){
+                var w = window.innerWidth;
+                if (w > 1000){
+                    document.getElementById("menuButton").classList.add("noneElement");
+                    document.getElementById("menuBar").classList.remove("noneElement");
+                }
+                else{
+                    document.getElementById("menuButton").classList.remove("noneElement");
+                    document.getElementById("menuBar").classList.add("noneElement");
+                }
+            }
 
         </script>
         
@@ -54,6 +66,8 @@
                 padding: 0;
                 overflow: hidden;
                 background-color: #383F45;
+                float: right;
+                padding-top: 9px;
             }
         
             li {
@@ -71,29 +85,34 @@
             li a:hover {
                 color: orange;
             }
+        
+            .noneElement{
+                display:none;
+            }
 
         </style>
     
     </head>
     
-    <body>
-        
-        <ul class="menuBar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <body onresize="resize()">
   
-        <div class="menuButton" onclick="menuButtonPressed(this)">
+        <div class="menuButton" onclick="menuButtonPressed(this)" id="menuButton">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
+        
+        <ul class="menuBar noneElement" id="menuBar">
+            <li><a href="https://www.oleitersdorf.com/">Home</a></li>
+            <li><a href="https://www.oleitersdorf.com/about/">About</a></li>
+            <li><a href="https://www.oleitersdorf.com/education/">Education</a></li>
+            <li><a href="https://www.oleitersdorf.com/contact/">Contact</a></li>
+        </ul>
 
         <div class="header">
 
             <div class="headerNameArea">
-                <h1> Orian Leitersdorf </h1>
+                <h1 id="a"> Orian Leitersdorf </h1>
             </div>
             
         </div>
