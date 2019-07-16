@@ -29,6 +29,17 @@
             
         }
     
+        function init(){
+            processUrlVars();
+            resize();
+        }
+    
+        function processUrlVars(){
+            var elementName = getUrlVars()["element"];
+            document.getElementById(elementName).style.color = 'orange';
+            document.getElementById(elementName + "Tab").style.color = 'orange';
+        }
+    
         function resize(){
             var w = window.innerWidth;
             if (w > 1000){
@@ -41,37 +52,46 @@
             }
         }
     
-        </script>
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+    
+    </script>
         
 </head>
 
-<body onresize="resize()" onload="resize()">
+<body onresize="resize()" onload="init()">
 
-    <div class="menuButton noneElement" onclick="menuButtonPressed(this)" id="menuButton">
+    <div class="menuButton" onclick="menuButtonPressed(this)" id="menuButton">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
 
-    <ul class="menuBar noneElement" id="menuBar">
-        <li><a href="https://www.oleitersdorf.com/">Home</a></li>
-        <li><a href="https://www.oleitersdorf.com/about/">About</a></li>
-        <li><a href="https://www.oleitersdorf.com/education/">Education</a></li>
-        <li><a href="https://www.oleitersdorf.com/projects/">Projects</a></li>
-        <li><a href="https://www.oleitersdorf.com/contact/">Contact</a></li>
+    <ul class="menuBar" id="menuBar">
+        <li><a id="home" href="https://www.oleitersdorf.com/">Home</a></li>
+        <li><a id="about" href="https://www.oleitersdorf.com/about/">About</a></li>
+        <li><a id="education" href="https://www.oleitersdorf.com/education/">Education</a></li>
+        <li><a id="projects" href="https://www.oleitersdorf.com/projects/">Projects</a></li>
+        <li><a id="contact" href="https://www.oleitersdorf.com/contact/">Contact</a></li>
     </ul>
     
     <div id="navigationTab" class="overlay">
         <div class="overlay-content">
-            <a href="https://www.oleitersdorf.com/">Home</a>
+            <a id="homeTab" href="https://www.oleitersdorf.com/">Home</a>
             <hr>
-            <a href="https://www.oleitersdorf.com/about/">About</a>
+            <a id="aboutTab" href="https://www.oleitersdorf.com/about/">About</a>
             <hr>
-            <a href="https://www.oleitersdorf.com/education/">Education</a>
+            <a id="educationTab" href="https://www.oleitersdorf.com/education/">Education</a>
             <hr>
-            <a href="https://www.oleitersdorf.com/projects/">Projects</a>
+            <a id="projectsTab" href="https://www.oleitersdorf.com/projects/">Projects</a>
             <hr>
-            <a href="https://www.oleitersdorf.com/contact/">Contact</a>
+            <a id="contactTab" href="https://www.oleitersdorf.com/contact/">Contact</a>
+            <hr>
         </div>
     </div>
 
